@@ -1,7 +1,9 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { Iproducts } from '../../types/products';
-import { ICategories } from '../../types/categories';
+import { Iproducts } from '../../models';
+import { ICategories } from '../../models';
+import { useFetchProductQuery } from '../../services/product.service';
+import { useFetchCategoriesQuery } from '../../services/category.service';
 
 interface IData {
     name: string;
@@ -13,16 +15,24 @@ interface IProps {
     category: ICategories[];
 }
 
-const AdminPage: React.FC<IProps> = ({ products, category }) => {
-    const data: IData[] = [
-        { name: 'Products', value: products.length },
-        { name: 'Categories', value: category.length },
+const AdminPage = () => {
+    const { data: product, isLoading } = useFetchProductQuery()
+    const { data: category } = useFetchCategoriesQuery()
+
+
+    const pro: IData[] = [
+        { name: 'Products', value: product?.length || 0 },
+        { name: 'Categories', value: category?.length || 0 },
     ];
+
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
 
     return (
         <div>
             <ResponsiveContainer width="100%" height={300}>
-                <BarChart data={data}>
+                <BarChart data={pro}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="name" />
                     <YAxis />

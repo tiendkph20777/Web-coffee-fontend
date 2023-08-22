@@ -2,30 +2,19 @@
 import { useNavigate } from 'react-router-dom';
 // import { useForm, SubmitHandler } from 'react-hook-form'
 import { Button, Checkbox, Form, Input, notification } from 'antd';
-import { ICategories } from '../../types/categories';
+import { ICategories } from '../../../models';
+import { useAddCategoryMutation } from '../../../services/category.service';
 interface IProps {
     categories: ICategories[],
     onAddCategory: (product: ICategories) => void
 }
-const AddCategory = (props: IProps) => {
-    const { categories, onAddCategory } = props;
+const AddCategory = () => {
+    const [createCate, { isSuccess }] = useAddCategoryMutation()
+
     const navigate = useNavigate()
     const onFinish = (values: any) => {
-        const categoryName = values.name;
-        const isCategoryExist = categories.some((category) => category.name === categoryName);
-        if (isCategoryExist) {
-            notification.error({
-                message: 'Error',
-                description: 'Category already exists!',
-            });
-        } else {
-            onAddCategory(values);
-            navigate('/admin/category');
-            notification.success({
-                message: 'Success',
-                description: 'Category added successfully!',
-            });
-        }
+        createCate(values)
+        navigate('/admin/category')
     };
     return (
         <div>
@@ -46,7 +35,7 @@ const AddCategory = (props: IProps) => {
                     <Input />
                 </Form.Item>
                 <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-                    <Button type="primary" htmlType="submit">
+                    <Button type="primary" htmlType="submit" style={{ color: "red" }}>
                         Add New Category
                     </Button>
                 </Form.Item>

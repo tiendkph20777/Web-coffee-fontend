@@ -1,37 +1,34 @@
-import React, { useEffect, useState } from 'react'
-import { Iproducts } from './types/products'
-import { Link } from 'react-router-dom'
-import { Col, Divider, Row, Button, Table, Pagination } from 'antd';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Col, Row, Button, Table, Pagination } from 'antd';
 import { Breadcrumb } from 'antd';
-import Banner from './components/Banner';
-
+import Banner from '../components/Banner';
+import { useFetchProductQuery } from '../../services/product.service';
+import { useAddCartMutation } from '../../services/cart.service';
+import { Iproducts } from '../../models';
 const style: React.CSSProperties = { textAlign: 'center', margin: '10px 21px', boxShadow: 'rgba(0, 0, 0, 0.16) 0px 1px 4px', padding: '8px', borderRadius: '8px' };
 const image_style: React.CSSProperties = { borderRadius: '8px' };
-interface Iprops {
-    products: Iproducts[],
-    categories: string[]
-}
-const ProductsPage = (props: Iprops) => {
-    const [data, setData] = useState<Iproducts[]>([])
-    useEffect(() => {
-        setData(props.products)
-    }, [props])
-    const [selectedCategory, setSelectedCategory] = useState<string>('');
 
-    const handleCategoryChange = (category: string) => {
-        setSelectedCategory(category);
-    };
-
+const ProductList = () => {
+    const { data, isLoading } = useFetchProductQuery();
+    const [addCartMutation, { isLoading: isAddingToCart }] = useAddCartMutation();
     const [currentPage, setCurrentPage] = useState<number>(1);
-    const [productsPerPage, setProductsPerPage] = useState<number>(8);
-
+    const productsPerPage = 8;
+    const handleAddToCart = (item: Iproducts) => {
+        const products = { ...item, quantity: 1 } // Log the product details
+        addCartMutation({ products });
+    };
     const handlePageChange = (page: number) => {
         setCurrentPage(page);
     };
 
+    if (isLoading) {
+        return <div>Loading...</div>;
+    }
+
     const indexOfLastProduct = currentPage * productsPerPage;
     const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-    const currentProducts = data.slice(indexOfFirstProduct, indexOfLastProduct);
+    const currentProducts = data?.slice(indexOfFirstProduct, indexOfLastProduct);
 
     const columns = [
         {
@@ -57,6 +54,8 @@ const ProductsPage = (props: Iprops) => {
         },
     ];
 
+    const [search, setData] = useState<Iproducts[]>([])
+
     const [searchKeyword, setSearchKeyword] = useState<string>('');
     const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchKeyword(event.target.value);
@@ -64,12 +63,12 @@ const ProductsPage = (props: Iprops) => {
 
     const handleSearch = () => {
         if (searchKeyword) {
-            const filteredProducts = data.filter((product) =>
+            const filteredProducts = search.filter((product) =>
                 product.name.toLowerCase().includes(searchKeyword.toLowerCase())
             );
             setData(filteredProducts);
         } else {
-            setData(props.products);
+            setData(data);
             return (
                 <div>
                     <p>Sản phẩm không tồn tại (●'◡'●)</p>
@@ -93,15 +92,7 @@ const ProductsPage = (props: Iprops) => {
                 ]}
             />
             <div className="category-buttons">
-                {props.categories.map((category) => (
-                    <Button
-                        key={category}
-                        onClick={() => handleCategoryChange(category)}
-                        type={selectedCategory === category ? 'primary' : 'default'}
-                    >
-                        {category}
-                    </Button>
-                ))}
+                {/* Buttons for categories */}
             </div>
 
             <div className='products_main'>
@@ -113,38 +104,40 @@ const ProductsPage = (props: Iprops) => {
                         onChange={handleSearchChange}
                         className="search-input"
                     />
-                    {/* <button onClick={handleSearch}>Search</button> */}
                     <Button style={{ backgroundColor: 'black', margin: '6px', color: '#fff' }} onClick={handleSearch}>Search</Button>
-
                 </div>
-                <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} >
-                    {currentProducts.map((item) => {
+
+                <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+                    {currentProducts?.map((item: Iproducts) => {
                         return (
-
-                            <Col style={style} className="gutter-row" span={5}>
-                                <Link to={'/products/' + item._id} style={{ textDecoration: 'none', color: 'inherit' }}>
-                                    <div key={item._id}>
-                                        <h2 style={{ minHeight: '3em' }}>{item.name}</h2>
-                                        <img style={image_style} width={100} src={item.images} alt="" />
-                                        <p style={{ minHeight: '2em', fontSize: "20px" }}>{item.price} VNĐ</p>
-
-                                        {/* <Button disabled>{item.categoryId}</Button> */}
-                                        {/* <p style={{ minHeight: '4em' }}>{item.details}</p> */}
+                            <Col style={style} className="gutter-row" span={5} key={item.id}>
+                                <Link to={'/products/' + item.id} style={{ textDecoration: 'none', color: 'inherit' }}>
+                                    <div>
+                                        <img style={{ width: '100%', borderRadius: '10px' }} src={item.images} alt="" />
+                                        <h2 style={{ minHeight: '3em', fontSize: '20px' }}>{item.name}</h2>
+                                        <p style={{ minHeight: '1em', fontSize: '20px' }}>{item.price} VNĐ</p>
                                     </div>
                                 </Link>
+                                <Button
+                                    onClick={() => handleAddToCart(item)}
+                                    loading={isAddingToCart}
+                                    disabled={isAddingToCart}
+                                >
+                                    Add to Cart
+                                </Button>
                             </Col>
-                        )
+                        );
                     })}
-                </Row >
+                </Row>
                 <Pagination
                     current={currentPage}
                     pageSize={productsPerPage}
-                    total={data.length}
+                    total={data?.length}
                     onChange={handlePageChange}
                 />
             </div>
-        </div >
+        </div>
     );
-}
+};
 
-export default ProductsPage
+export default ProductList;

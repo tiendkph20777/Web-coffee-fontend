@@ -2,146 +2,172 @@
   "products": [
     {
       "id": 1,
-      "name": "IPhone 14 Pro Max 128GB I Chính Hãng",
-      "price": "27150000",
-      "image": "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/t/_/t_m_18.png",
-      "description": " Màn hình Dynamic Island - Sự biến mất của màn hình tai thỏ thay thế bằng thiết kế viên thuốc, OLED 6,7 inch, hỗ trợ always-on display",
-      "categoryId": 5
+      "name": "Trà Đào Bưởi Hồng Trân ",
+      "price": 25000,
+      "images": "https://tocotocotea.com/wp-content/uploads/2022/06/Tra-dao-buoi-hong-tran-chau-baby.jpg",
+      "details": "Sản phẩm là sự kết hợp hài hòa của nhiều nguyên liệu trộn vào với nhau cùng với trân trâu dai dai tạo cảm giác thích thú . Là một sản phẩm tuyệt vời cho một ngày hè nóng nực như thế này .",
+      "categoryId": 2
     },
     {
       "id": 2,
-      "name": "Xiaomi 11T",
-      "price": "10990000",
-      "description": "Li-Po 5000 mAh Sạc nhanh 67W, đầy pin trong 36ph (quảng cáo)",
-      "image": "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/x/i/xiaomi-mi-11t-1_1.jpg",
+      "name": "Trà Đào Dâu Tây Kem Phô Mai ",
+      "price": 25000,
+      "images": "https://tocotocotea.com/wp-content/uploads/2023/01/Tra-Dao-Dau-Tay-Kem-Pho-Mai.png",
+      "details": "Sản phẩm là sự kết hợp hài hòa của nhiều nguyên liệu trộn vào với nhau cùng với trân trâu dai dai tạo cảm giác thích thú . Là một sản phẩm tuyệt vời cho một ngày hè nóng nực như thế này .",
       "categoryId": 1
     },
     {
       "id": 3,
-      "name": "Xiaomi Redmi Note 12 Pro 5G",
-      "price": "9190000",
-      "description": "Li-Po 5000mAh Sạc nhanh 67W, 100% trong 46 phút (quảng cáo)",
-      "image": "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/g/t/gtt7766.jpg",
+      "name": "Sữa Chua Mận Hạt Sen",
+      "price": 25000,
+      "images": "https://tocotocotea.com/wp-content/uploads/2022/10/sua-chua-man-hat-sen-.png",
+      "details": "Trà là đồ uống phổ biến ở Việt Nam. Ngày nay, với nhiều cách biến tấu, kết hợp, nhiều vị trà mới ra đời và nhận được sự yêu thích rất lớn, trà xoài ô long là một ví dụ điển hình – một loại thức uống thơm ngon đem lại cho người dùng sự sảng khoái mát lạnh khi thưởng thức. Bạn đã biết cách làm món này chưa? Nếu chưa thì hãy vào bếp cùng Anchay.vn thực hiện ngay bạn nhé!",
       "categoryId": 3
     },
     {
       "id": 4,
-      "name": "Xiaomi 13 Lite",
-      "price": "9890000",
-      "description": " Hệ thống camera hàng đầu - Camera kép selfie cùng khung hình động đem lại những bức ảnh kiệt tác",
-      "image": "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/1/3/13_liteee.jpg"
+      "name": "Trà Mận Hạt ",
+      "price": 25000,
+      "images": "https://tocotocotea.com/wp-content/uploads/2022/10/tra-man-hat-sen.png",
+      "details": "Trà là đồ uống phổ biến ở Việt Nam. Ngày nay, với nhiều cách biến tấu, kết hợp, nhiều vị trà mới ra đời và nhận được sự yêu thích rất lớn, trà xoài ô long là một ví dụ điển hình – một loại thức uống thơm ngon đem lại cho người dùng sự sảng khoái mát lạnh khi thưởng thức. Bạn đã biết cách làm món này chưa? Nếu chưa thì hãy vào bếp cùng Anchay.vn thực hiện ngay bạn nhé!",
+      "categoryId": 4
     },
     {
       "id": 5,
-      "name": "Xiaomi 12T Pro",
-      "price": "15490000",
-      "description": " Kiến tạo siêu khoảnh khắc - Hệ thống camera 200MP, chống rung quang học OIS và ống kính 8P",
-      "image": "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/x/i/xiaomi-12t-xanh_2.jpg"
+      "name": "Trà Mận Hạt ",
+      "price": 25000,
+      "images": "https://tocotocotea.com/wp-content/uploads/2022/10/tra-man-hat-sen.png",
+      "details": "Trà là đồ uống phổ biến ở Việt Nam. Ngày nay, với nhiều cách biến tấu, kết hợp, nhiều vị trà mới ra đời và nhận được sự yêu thích rất lớn, trà xoài ô long là một ví dụ điển hình – một loại thức uống thơm ngon đem lại cho người dùng sự sảng khoái mát lạnh khi thưởng thức. Bạn đã biết cách làm món này chưa? Nếu chưa thì hãy vào bếp cùng Anchay.vn thực hiện ngay bạn nhé!",
+      "categoryId": 5
     },
     {
       "id": 6,
-      "name": "Xiaomi 13 8GB 256GB",
-      "price": "17990000 ",
-      "description": " Ống kính Leica chuyên nghiệp - 2 phong cách nhiếp ảnh vintage cùng hiện đại sống động giúp bạn tha hồ lựa chọn",
-      "image": "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/p/m/pms_1670745783.80967984.png"
-    },
-    {
-      "id": 7,
-      "name": "Xiaomi Mi 10S (99.9% - Kèm sạc 33W)",
-      "price": "5850000",
-      "description": "Li-Po 4780 mAh Sạc nhanh 33W, 100% trong 56 phút (Quảng cáo) Sạc nhanh không dây 30W, 100% trong 69 phút (Quảng cáo) Sạc ngược không dây 10W Power Delivery 3.0, Quick Charge 4+",
-      "image": "https://cdn.mobilecity.vn/mobilecity-vn/images/2021/07/w300/xiaomi-mi-10s-trang-1.png.webp"
+      "name": "Trà Đào Bưởi Hồng Trân ",
+      "price": 25000,
+      "images": "https://tocotocotea.com/wp-content/uploads/2022/06/Tra-dao-buoi-hong-tran-chau-baby.jpg",
+      "details": "Sản phẩm là sự kết hợp hài hòa của nhiều nguyên liệu trộn vào với nhau cùng với trân trâu dai dai tạo cảm giác thích thú . Là một sản phẩm tuyệt vời cho một ngày hè nóng nực như thế này .",
+      "categoryId": 4
     },
     {
       "id": 8,
-      "name": "Xiaomi 13 Pro 12GB 256GB",
-      "price": "24090000",
-      "image": "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/1/3/13_prooo.jpg",
-      "description": " Ống kính nhiếp ành Leica chuyên nghiệp - Cảm biến máy ảnh lớn 1 inch, chụp chân dung và chụp đêm siêu rõ nét"
+      "name": "Trà Đào Dâu Tây Kem Phô Mai ",
+      "price": 25000,
+      "images": "https://tocotocotea.com/wp-content/uploads/2023/01/Tra-Dao-Dau-Tay-Kem-Pho-Mai.png",
+      "details": "Sản phẩm là sự kết hợp hài hòa của nhiều nguyên liệu trộn vào với nhau cùng với trân trâu dai dai tạo cảm giác thích thú . Là một sản phẩm tuyệt vời cho một ngày hè nóng nực như thế này .",
+      "categoryId": 1
     },
     {
       "id": 9,
-      "name": "Samsung Galaxy S21 Ultra 5G 16GB 512GB",
-      "price": "40990000",
-      "image": "https://www.xtmobile.vn/vnt_upload/product/03_2021/thumbs/600_galaxy_s21_ultra_5g_128gb_xtmobile.jpg",
-      "description": "Màn hình Dynamic AMOLED 2X 6.8 inch - Camera zoom quang học 10x - Chip Exynos 2100 5G"
+      "name": "Sữa Chua Mận Hạt Sen",
+      "price": 25000,
+      "images": "https://tocotocotea.com/wp-content/uploads/2022/10/sua-chua-man-hat-sen-.png",
+      "details": "Trà là đồ uống phổ biến ở Việt Nam. Ngày nay, với nhiều cách biến tấu, kết hợp, nhiều vị trà mới ra đời và nhận được sự yêu thích rất lớn, trà xoài ô long là một ví dụ điển hình – một loại thức uống thơm ngon đem lại cho người dùng sự sảng khoái mát lạnh khi thưởng thức. Bạn đã biết cách làm món này chưa? Nếu chưa thì hãy vào bếp cùng Anchay.vn thực hiện ngay bạn nhé!",
+      "categoryId": 3
     },
     {
       "id": 10,
-      "name": "iPhone 13 Pro Max 5G 1TB",
-      "price": "51490000",
-      "image": "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/3/_/3_51_1_10.jpg",
-      "description": "Màn hình OLED 6.7 inch - Hệ thống camera chuyên nghiệp - Chip A15 Bionic 5G"
+      "name": "Trà Mận Hạt ",
+      "price": 25000,
+      "images": "https://tocotocotea.com/wp-content/uploads/2022/10/tra-man-hat-sen.png",
+      "details": "Trà là đồ uống phổ biến ở Việt Nam. Ngày nay, với nhiều cách biến tấu, kết hợp, nhiều vị trà mới ra đời và nhận được sự yêu thích rất lớn, trà xoài ô long là một ví dụ điển hình – một loại thức uống thơm ngon đem lại cho người dùng sự sảng khoái mát lạnh khi thưởng thức. Bạn đã biết cách làm món này chưa? Nếu chưa thì hãy vào bếp cùng Anchay.vn thực hiện ngay bạn nhé!",
+      "categoryId": 2
     },
     {
       "id": 11,
-      "name": "Xiaomi Mi 12 12GB 512GB",
-      "price": "28990000",
-      "image": "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/g/t/gtt7766.jpg",
-      "description": "Màn hình AMOLED 6.7 inch - Camera chính 108 MP - Chip Snapdragon 898 5G"
+      "name": "Ô Long Xoài Kem Cà Phê",
+      "price": 25000,
+      "images": "https://tocotocotea.com/wp-content/uploads/2022/06/O-Long-xoai-kem-coffee.jpg",
+      "details": "Sản phẩm là sự kết hợp hài hòa của nhiều nguyên liệu trộn vào với nhau cùng với trân trâu dai dai tạo cảm giác thích thú . Là một sản phẩm tuyệt vời cho một ngày hè nóng nực như thế này .",
+      "categoryId": 2
     },
     {
       "id": 12,
-      "name": "OPPO Find X4 Pro 12GB 512GB",
-      "price": "34490000",
-      "image": "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/n/2/n2_flip_-_combo_product_-_black.png",
-      "description": "Màn hình AMOLED 6.7 inch - Camera zoom quang học 10x - Chip Snapdragon 8 Gen 1 5G"
+      "name": "Trà Đào Bưởi Hồng Trân ",
+      "price": 25000,
+      "images": "https://tocotocotea.com/wp-content/uploads/2022/06/Tra-dao-buoi-hong-tran-chau-baby.jpg",
+      "details": "Sản phẩm là sự kết hợp hài hòa của nhiều nguyên liệu trộn vào với nhau cùng với trân trâu dai dai tạo cảm giác thích thú . Là một sản phẩm tuyệt vời cho một ngày hè nóng nực như thế này .",
+      "categoryId": 5
     },
     {
       "id": 13,
-      "name": "Google Pixel 6 Pro 12GB 512GB",
-      "price": "36990000",
-      "image": "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/s/2/s23-ultra-den_2.png",
-      "description": "Màn hình P-OLED 6.7 inch - Camera chính 50 MP - Chip Tensor 5G"
+      "name": "Trà Mận Hạt ",
+      "price": 25000,
+      "images": "https://tocotocotea.com/wp-content/uploads/2022/10/tra-man-hat-sen.png",
+      "details": "Trà là đồ uống phổ biến ở Việt Nam. Ngày nay, với nhiều cách biến tấu, kết hợp, nhiều vị trà mới ra đời và nhận được sự yêu thích rất lớn, trà xoài ô long là một ví dụ điển hình – một loại thức uống thơm ngon đem lại cho người dùng sự sảng khoái mát lạnh khi thưởng thức. Bạn đã biết cách làm món này chưa? Nếu chưa thì hãy vào bếp cùng Anchay.vn thực hiện ngay bạn nhé!",
+      "categoryId": 3
     },
     {
       "id": 14,
-      "name": "Realme GT Neo2 12GB 512GB",
-      "price": "13990000",
-      "image": "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/r/e/realme-gt-neo2-6k1-099.jpg",
-      "description": "Màn hình AMOLED 6.62 inch - Camera chính 64 MP - Chip Snapdragon 870 5G"
+      "name": "Ô Long Xoài Kem Cà Phê",
+      "price": 25000,
+      "images": "https://tocotocotea.com/wp-content/uploads/2022/06/O-Long-xoai-kem-coffee.jpg",
+      "details": "Sản phẩm là sự kết hợp hài hòa của nhiều nguyên liệu trộn vào với nhau cùng với trân trâu dai dai tạo cảm giác thích thú . Là một sản phẩm tuyệt vời cho một ngày hè nóng nực như thế này .",
+      "categoryId": 5
+    },
+    {
+      "id": 15,
+      "name": "Trà Đào Bưởi Hồng Trân ",
+      "price": 25000,
+      "images": "https://tocotocotea.com/wp-content/uploads/2022/06/Tra-dao-buoi-hong-tran-chau-baby.jpg",
+      "details": "Sản phẩm là sự kết hợp hài hòa của nhiều nguyên liệu trộn vào với nhau cùng với trân trâu dai dai tạo cảm giác thích thú . Là một sản phẩm tuyệt vời cho một ngày hè nóng nực như thế này .",
+      "categoryId": 1
     }
   ],
   "categories": [
     {
       "id": 1,
-      "name": "Xiaomi "
+      "name": "Trà sữa "
     },
     {
       "id": 2,
-      "name": "SmartPhone"
+      "name": "Sữa chua"
     },
     {
       "id": 3,
-      "name": "Fast Charging"
+      "name": "Sinh tố"
     },
     {
-      "name": "test 01",
-      "id": 4
+      "id": 4,
+      "name": "Đá xay"
     },
     {
-      "name": "Iphone",
-      "id": 5
+      "id": 5,
+      "name": "trà chanh"
     }
   ],
   "users": [
     {
       "name": "Laxus",
       "password": "123",
-      "rePassword": "123",
       "email": "laxus2301@gmail.com",
-      "tel": "0862325011",
       "id": 1,
-      "role": 0
+      "role": "admin"
     },
     {
-      "name": "user01",
-      "password": "Vinh0987@",
-      "rePassword": "Vinh0987@",
-      "email": "user01@gmail.com",
-      "tel": "0862325011",
-      "id": 2,
-      "role": 1
+      "email": "tien@gmail.com",
+      "password": "123456",
+      "role": "admin",
+      "id": 3
+    },
+    {
+      "email": "tien111@gmail.com",
+      "password": "123456",
+      "role": "member",
+      "id": 4
+    }
+  ],
+  "cart": [
+    {
+      "products": {
+        "id": 3,
+        "name": "Sữa Chua Mận Hạt Sen",
+        "price": 25000,
+        "images": "https://tocotocotea.com/wp-content/uploads/2022/10/sua-chua-man-hat-sen-.png",
+        "details": "Trà là đồ uống phổ biến ở Việt Nam. Ngày nay, với nhiều cách biến tấu, kết hợp, nhiều vị trà mới ra đời và nhận được sự yêu thích rất lớn, trà xoài ô long là một ví dụ điển hình – một loại thức uống thơm ngon đem lại cho người dùng sự sảng khoái mát lạnh khi thưởng thức. Bạn đã biết cách làm món này chưa? Nếu chưa thì hãy vào bếp cùng Anchay.vn thực hiện ngay bạn nhé!",
+        "categoryId": 3,
+        "quantity": 1
+      },
+      "id": 1
     }
   ]
 }

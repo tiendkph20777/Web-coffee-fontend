@@ -1,22 +1,24 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Iproducts } from '../../types/products';
+import { Iproducts } from '../../../models';
 import { Button, Checkbox, Form, Input, notification, Select } from 'antd';
-import { ICategories } from '../../types/categories';
+// import { ICategories } from '../../../models';
+import { useAddProductMutation } from '../../../services/product.service';
+import { useFetchCategoriesQuery } from '../../../services/category.service';
 
-interface IProps {
-    category: ICategories[];
-    onAdd: (product: Iproducts) => void;
-}
+
 
 const { Option } = Select;
 
-const AddProduct: React.FC<IProps> = (props: IProps) => {
+const AddProduct: React.FC = () => {
     const navigate = useNavigate();
+    const [addCart] = useAddProductMutation();
+    const { data: categories } = useFetchCategoriesQuery();
+    console.log(categories);
+    const onFinish = (products: Iproducts) => {
+        console.log(products);
+        addCart(products);
 
-    const onFinish = (values: Iproducts) => {
-        props.onAdd(values);
-        console.log(values);
         navigate('/admin/products');
         notification.success({
             message: 'Success',
@@ -90,9 +92,9 @@ const AddProduct: React.FC<IProps> = (props: IProps) => {
                     rules={[{ required: true, message: 'Please select a category!' }]}
                 >
                     <Select placeholder="Select a category">
-                        {props.category.map((cateID: ICategories) => (
-                            <Option key={cateID._id} value={cateID._id}>
-                                {cateID.name}
+                        {categories?.map((category) => (
+                            <Option key={category.id} value={category.id}>
+                                {category.name}
                             </Option>
                         ))}
                     </Select>
